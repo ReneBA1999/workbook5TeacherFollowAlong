@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--<button id="myButton">Click me to Display Names</button> -->
+    <p id="names">
+
+    </p>
+
+    <p id="fullname">
+
+    </p>
+    <label for="namelist">Select a name: </label>
+    <select id="namelist">
+        <option value="1">Firstname </option>
+    </select>
+
+
+    <script>
+        let kids = [
+            { first: "Natalie", last: "Plyers" },
+            { first: "Brittany", last: "Ray" },
+            { first: "Zachary", last: "Westly" },
+        ];
+
+        //Displaying the firstname of the first kad
+
+        function getFirstname(_object)
+        {
+            return _object.first;
+        }
+
+
+        function getFullname(_object)
+        {
+            return _object.first + " " + _object.last;
+        }
+        // let firstNameFirstKid = getFirstname(kids[0]);
+        //let firstNameSecondKid = getFirstname(kids[1]);
+
+        // A new namelist
+        let firstnamesList = kids.map(getFirstname);
+        document.getElementById('names').innerHTML = firstnamesList;
+
+        let fullnamelist = kids.map(getFullname);
+        document.getElementById('fullname').innerHTML = fullnamelist;
+
+
+        //grab the namelist HTML part
+       const nameDropdowns =  document.getElementById('namelist')
+       firstnamesList.map((fullname) =>  {
+            const option = document.createElement("option");
+            option.value = fullname;
+            option.text = "Hi " + fullname;
+        
+        nameDropdowns.appendChild(option);
+        });
+    </script>
+</body>
+
+</html>

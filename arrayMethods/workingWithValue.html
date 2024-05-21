@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    HTML
+<input type="text" id="nameField" name="name" />
+<input type="number" id="ageField" name="age" />
+<select id="genderField" name="gender">
+ <option value="">Select One…</option>
+ <option value="F">Female</option>
+ <option value="M">Male</option>
+</select>
+
+<!--JavaScript-->
+<script>
+const nameField = document.getElementById("nameField");
+const ageField = document.getElementById("ageField");
+const genderField = document.getElementById("genderField");
+// getting values
+let name = nameField.value;
+let age = Number(ageField.value);
+let gender = genderField.value; // "", "F", or "M"
+// setting values
+nameField.value = "";
+ageField.value = "";
+genderField.value = ""; </script>// reset to "Select One…"
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+/* CSS rule to give images an oval appearance */
+.roundImg {
+    width: 200px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* This makes the image oval */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    display: block;
+    margin: 10px auto;
+}

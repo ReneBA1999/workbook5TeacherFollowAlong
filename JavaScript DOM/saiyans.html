@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saiyan Selector</title>
+    <script src="saiyans.js"></script> <!-- Include the Saiyan data before your main script -->
+</head>
+<body>
+    <label for="saiyanDropdown">Choose a Saiyan:</label>
+    <select id="saiyanDropdown"></select>
+    <button id="showDetailsBtn">Show Selected Saiyan</button>
+    <p id="saiyanDetails"></p>
+   
+    <script>
+
+let selectSaiyan= document.getElementById('selectSaiyan');
+        createButton.addEventListener('click', function ()
+        {
+            let newDragonBall = document.createElement('div');
+            newDragonBall.className = 'dragon-ball';
+            newDragonBall.textContent = 'New Dragon Ball';
+            document.body.appendChild(newDragonBall);
+        });
+
+        const dropdown = document.getElementById('saiyanDropdown');
+        let fragment = document.createDocumentFragment();
+
+        saiyans.forEach(saiyan => {
+            const option = document.createElement('option');
+            option.value = saiyan.poweLevel;
+            option.value = saiyan.name;
+            option.textContent = `${saiyan.name} (${saiyan.powerLevel})`;
+           
+            fragment.appendChild(option);
+        });
+
+        dropdown.appendChild(fragment);
+    </script>
+</body>
+</html>
